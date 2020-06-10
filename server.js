@@ -8,10 +8,14 @@ const pathMatch = require('path-match')
 const { parse } = require('url');
 const handle = app.getRequestHandler()
 
+// app.use(express.static('static'));
+
 app.prepare().then(() => {
   const server = express();
-  app.use(express.static('static'));
   const route = pathMatch();
+
+  server.use(express.static('static'));
+
   server.get('/users/:userId/about', (req, res) => {
     const params = route('/users/:userId/about')(parse(req.url).pathname);
     return app.render(req, res, '/about', params);
