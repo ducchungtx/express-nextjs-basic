@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "next": "9.4.4",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "path-match": "^1.2.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
